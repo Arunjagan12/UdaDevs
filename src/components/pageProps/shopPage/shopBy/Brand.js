@@ -11,19 +11,19 @@ const Brand = () => {
     },
     {
       _id: 9007,
-      title: "Ultron",
+      title: "Adobe",
     },
     {
       _id: 9008,
-      title: "Unknown",
+      title: "Google",
     },
     {
       _id: 9009,
-      title: "Shoppers Home",
+      title: "Meta",
     },
     {
       _id: 9010,
-      title: "Hoichoi",
+      title: "Amazon",
     },
   ];
 
@@ -33,7 +33,7 @@ const Brand = () => {
         onClick={() => setShowBrands(!showBrands)}
         className="cursor-pointer"
       >
-        <NavTitle title="Shop by Brand" icons={true} />
+        <NavTitle title="Interview Preparation" icons={true} />
       </div>
       {showBrands && (
         <motion.div

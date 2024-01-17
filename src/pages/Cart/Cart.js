@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
-import { resetCart } from "../../redux/orebiSlice";
+
 import { emptyCart } from "../../assets/images/index";
 import ItemCard from "./ItemCard";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.orebiReducer.products);
+  const products = useSelector((state) => state.udaDevReducer.products);
   const [totalAmt, setTotalAmt] = useState("");
   const [shippingCharge, setShippingCharge] = useState("");
   useEffect(() => {
@@ -38,7 +38,7 @@ const Cart = () => {
             <h2 className="col-span-2">Product</h2>
             <h2>Price</h2>
             <h2>Quantity</h2>
-            <h2>Sub Total</h2>
+            <h2>Status</h2>
           </div>
           <div className="mt-5">
             {products.map((item) => (
@@ -48,12 +48,6 @@ const Cart = () => {
             ))}
           </div>
 
-          <button
-            onClick={() => dispatch(resetCart())}
-            className="py-2 px-10 bg-red-500 text-white font-semibold uppercase mb-4 hover:bg-red-700 duration-300"
-          >
-            Reset cart
-          </button>
 
           <div className="flex flex-col mdl:flex-row justify-between border py-4 px-4 items-center gap-2 mdl:gap-0">
             <div className="flex items-center gap-4">
@@ -117,15 +111,15 @@ const Cart = () => {
           </div>
           <div className="max-w-[500px] p-4 py-8 bg-white flex gap-4 flex-col items-center rounded-md shadow-lg">
             <h1 className="font-titleFont text-xl font-bold uppercase">
-              Your Cart feels lonely.
+              You haven't enrolled in any courses.
             </h1>
             <p className="text-sm text-center px-10 -mt-2">
-              Your Shopping cart lives to serve. Give it purpose - fill it with
-              books, electronics, videos, etc. and make it happy.
+            Your eLearning cart exists to serve. 
+            Give it purpose - fill it with courses, eBooks, tutorials, videos, and more, and make it a source of knowledge and growth.
             </p>
             <Link to="/shop">
               <button className="bg-primeColor rounded-md cursor-pointer hover:bg-black active:bg-gray-900 px-8 py-2 font-titleFont font-semibold text-lg text-gray-200 hover:text-white duration-300">
-                Continue Shopping
+                Continue Learning
               </button>
             </Link>
           </div>

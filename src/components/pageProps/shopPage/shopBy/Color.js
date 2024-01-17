@@ -7,29 +7,25 @@ const Color = () => {
   const colors = [
     {
       _id: 9001,
-      title: "Green",
+      title: "Blockchain",
       base: "#22c55e",
     },
     {
       _id: 9002,
-      title: "Gray",
+      title: "Flutter Development",
       base: "#a3a3a3",
     },
     {
       _id: 9003,
-      title: "Red",
+      title: "DevOps",
       base: "#dc2626",
     },
     {
       _id: 9004,
-      title: "Yellow",
+      title: "Web Development",
       base: "#f59e0b",
     },
-    {
-      _id: 9005,
-      title: "Blue",
-      base: "#3b82f6",
-    },
+   
   ];
 
   return (
@@ -38,7 +34,7 @@ const Color = () => {
         onClick={() => setShowColors(!showColors)}
         className="cursor-pointer"
       >
-        <NavTitle title="Shop by Color" icons={true} />
+        <NavTitle title="Domains" icons={true} />
       </div>
       {showColors && (
         <motion.div

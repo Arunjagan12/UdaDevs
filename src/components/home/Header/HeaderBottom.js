@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import { paginationItems } from "../../../constants";
 
 const HeaderBottom = () => {
-  const products = useSelector((state) => state.orebiReducer.products);
+  const products = useSelector((state) => state.udaDevReducer.products);
   const [show, setShow] = useState(false);
   const [showUser, setShowUser] = useState(false);
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const HeaderBottom = () => {
 
   useEffect(() => {
     const filtered = paginationItems.filter((item) =>
-      item.productName.toLowerCase().includes(searchQuery.toLowerCase())
+      item.courseName.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setFilteredProducts(filtered);
   }, [searchQuery]);
@@ -48,7 +48,7 @@ const HeaderBottom = () => {
             className="flex h-14 cursor-pointer items-center gap-2 text-primeColor"
           >
             <HiOutlineMenuAlt4 className="w-5 h-5" />
-            <p className="text-[14px] font-normal">Shop by Category</p>
+            <p className="text-[14px] font-normal">Shop by Domain</p>
 
             {show && (
               <motion.ul
@@ -58,22 +58,22 @@ const HeaderBottom = () => {
                 className="absolute top-36 z-50 bg-primeColor w-auto text-[#767676] h-auto p-4 pb-6"
               >
                 <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                  Accessories
+                  Web Development
                 </li>
                 <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                  Furniture
+                  App Development
                 </li>
                 <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                  Electronics
+                 Blockchain
                 </li>
                 <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                  Clothes
+                  Internet of Things
                 </li>
                 <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400  hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                  Bags
+                  Cybersecurity
                 </li>
                 <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400  hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                  Home appliances
+                  DevOps
                 </li>
               </motion.ul>
             )}
@@ -84,7 +84,7 @@ const HeaderBottom = () => {
               type="text"
               onChange={handleSearch}
               value={searchQuery}
-              placeholder="Search your products here"
+              placeholder="Search for anything"
             />
             <FaSearch className="w-5 h-5" />
             {searchQuery && (
@@ -96,7 +96,7 @@ const HeaderBottom = () => {
                     <div
                       onClick={() =>
                         navigate(
-                          `/product/${item.productName
+                          `/product/${item.courseName
                             .toLowerCase()
                             .split(" ")
                             .join("")}`,
@@ -115,7 +115,7 @@ const HeaderBottom = () => {
                       <img className="w-24" src={item.img} alt="productImg" />
                       <div className="flex flex-col gap-1">
                         <p className="font-semibold text-lg">
-                          {item.productName}
+                          {item.courseName}
                         </p>
                         <p className="text-xs">{item.des}</p>
                         <p className="text-sm">

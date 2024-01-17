@@ -13,11 +13,11 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [messages, setMessages] = useState("");
 
-  // ========== Error Messages Start here ============
+  
   const [errClientName, setErrClientName] = useState("");
   const [errEmail, setErrEmail] = useState("");
   const [errMessages, setErrMessages] = useState("");
-  // ========== Error Messages End here ==============
+ 
   const [successMsg, setSuccessMsg] = useState("");
 
   const handleName = (e) => {
@@ -33,13 +33,13 @@ const Contact = () => {
     setErrMessages("");
   };
 
-  // ================= Email Validation start here =============
+ 
   const EmailValidation = (email) => {
     return String(email)
       .toLowerCase()
       .match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
   };
-  // ================= Email Validation End here ===============
+ 
 
   const handlePost = (e) => {
     e.preventDefault();
@@ -83,7 +83,7 @@ const Contact = () => {
                 value={clientName}
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
                 type="text"
-                placeholder="Enter your name here"
+                placeholder="Enter your name"
               />
               {errClientName && (
                 <p className="text-red-500 text-sm font-titleFont font-semibold mt-1 px-2 flex items-center gap-1">
@@ -101,7 +101,7 @@ const Contact = () => {
                 value={email}
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
                 type="email"
-                placeholder="Enter your name here"
+                placeholder="Enter your mail ID"
               />
               {errEmail && (
                 <p className="text-red-500 text-sm font-titleFont font-semibold mt-1 px-2 flex items-center gap-1">
@@ -112,7 +112,7 @@ const Contact = () => {
             </div>
             <div>
               <p className="text-base font-titleFont font-semibold px-2">
-                Messages
+                Message
               </p>
               <textarea
                 onChange={handleMessages}
@@ -121,7 +121,7 @@ const Contact = () => {
                 rows="3"
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor resize-none"
                 type="text"
-                placeholder="Enter your name here"
+                placeholder="Enter your Message"
               ></textarea>
               {errMessages && (
                 <p className="text-red-500 text-sm font-titleFont font-semibold mt-1 px-2 flex items-center gap-1">

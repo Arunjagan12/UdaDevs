@@ -13,7 +13,7 @@ function Items({ currentItems }) {
             <Product
               _id={item._id}
               img={item.img}
-              productName={item.productName}
+              courseName={item.courseName}
               price={item.price}
               color={item.color}
               badge={item.badge}

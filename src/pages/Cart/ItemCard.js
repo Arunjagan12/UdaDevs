@@ -3,9 +3,7 @@ import { ImCross } from "react-icons/im";
 import { useDispatch } from "react-redux";
 import {
   deleteItem,
-  drecreaseQuantity,
-  increaseQuantity,
-} from "../../redux/orebiSlice";
+} from "../../redux/udaDevSlice";
 
 const ItemCard = ({ item }) => {
   const dispatch = useDispatch();
@@ -24,23 +22,11 @@ const ItemCard = ({ item }) => {
           ${item.price}
         </div>
         <div className="w-1/3 flex items-center gap-6 text-lg">
-          <span
-            onClick={() => dispatch(drecreaseQuantity({ _id: item._id }))}
-            className="w-6 h-6 bg-gray-100 text-2xl flex items-center justify-center hover:bg-gray-300 cursor-pointer duration-300 border-[1px] border-gray-300 hover:border-gray-300"
-          >
-            -
-          </span>
-          <p>{item.quantity}</p>
-          <span
-            onClick={() => dispatch(increaseQuantity({ _id: item._id }))}
-            className="w-6 h-6 bg-gray-100 text-2xl flex items-center justify-center hover:bg-gray-300 cursor-pointer duration-300 border-[1px] border-gray-300 hover:border-gray-300"
-          >
-            +
-          </span>
+         
+          <p>Enrolled</p>
+         
         </div>
-        <div className="w-1/3 flex items-center font-titleFont font-bold text-lg">
-          <p>${item.quantity * item.price}</p>
-        </div>
+        
       </div>
     </div>
   );
