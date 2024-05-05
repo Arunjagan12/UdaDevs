@@ -19,11 +19,18 @@ export const udaDevSlice = createSlice({
         state.products.push(action.payload);
       }
     },
-   
     deleteItem: (state, action) => {
       state.products = state.products.filter(
         (item) => item._id !== action.payload
       );
+    },
+    markCourseCompleted: (state, action) => {
+      const course = state.products.find(
+        (course) => course._id === action.payload
+      );
+      if (course) {
+        course.completed = true;
+      }
     },
     resetCart: (state) => {
       state.products = [];
@@ -34,6 +41,7 @@ export const udaDevSlice = createSlice({
 export const {
   addToCart,
   deleteItem,
+  markCourseCompleted,
   resetCart,
 } = udaDevSlice.actions;
 export default udaDevSlice.reducer;

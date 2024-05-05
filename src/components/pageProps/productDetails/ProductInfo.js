@@ -29,7 +29,7 @@ const ProductInfo = ({ productInfo }) => {
         }
         className="w-full py-4 bg-primeColor hover:bg-black duration-300 text-white text-lg font-titleFont"
       >
-        Add to Cart
+        Enroll Now
       </button>
       
     </div>
