@@ -1,12 +1,43 @@
-# Getting Started with Create React App
+# UdaDevs - React E-Learning Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+UdaDevs is a React-based e-learning platform designed to showcase courses, provide detailed course information, and offer a user-friendly dashboard for students.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Course Listing:** Display a scrollable list of courses with basic information.
+- **Course Details Screen:** View detailed information about a selected course, including course name, instructor, description, enrollment status, duration, schedule, location, prerequisites, and syllabus.
+- **Student Dashboard:** User-friendly interface to display enrolled courses, including course name, instructor name, thumbnail, due date, and progress bar. Students can mark courses as completed.
+- **Advanced State Management:** Utilizes Redux for effective state management.
 
-### `npm start`
+## Course Listing
+
+- Fetches a list of sample courses from a dummy API or backend like Firebase.
+- Enables searching based on course name and instructor.
+- Users can click on a course to view its details.
+
+## Course Details Screen
+
+- Displays detailed information about a selected course.
+- Includes course name, instructor's name, description, enrollment status, course duration, schedule, location, prerequisites, and an expandable syllabus.
+
+## Student Dashboard
+
+- Provides a user-friendly interface to display enrolled courses.
+- Displays course name, instructor name, thumbnail, due date, and progress bar.
+- Allows students to mark courses as completed.
+
+## Installation and Usage
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+2. Install the dependencies
+   ```bash
+   npm install
+3. Run the Development Server
+   ```bash
+   npm start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
